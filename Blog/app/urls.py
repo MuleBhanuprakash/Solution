@@ -12,5 +12,6 @@ router.register('image_embed', ImageEmbedViewSet, basename='image_embed')
 router.register('github', GithubViewSet, basename='github')
 # router.register('image_upload', ImageUploadViewSet, basename='image_upload')
 router.register('quote', QuoteViewSet, basename='quote')
+router.register('photo', PhotViewSet, basename='photo')
 
 urlpatterns = router.urls

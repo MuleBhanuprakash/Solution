@@ -122,6 +122,7 @@ class TaskImage(models.Model):
 
 
 class Photo(models.Model):
+    id = models.IntegerField(primary_key=True)
     name = models.CharField(max_length=200)
     image = models.ImageField()
 

@@ -1,9 +1,9 @@
 from django.shortcuts import render
 from rest_framework.response import Response
 
-from .models import Blog, Bookmarks, VideoEmbed, ImageEmbed, GithubEmbed, Task, Quote
+from .models import Blog, Bookmarks, VideoEmbed, ImageEmbed, GithubEmbed, Task, Quote, Photo
 from .serializers import BlogSerializer, BookmarkSerializer, VideoSerializer, ImageEmbedSerializer, GithubSerializer, \
-    TaskSerializer, QuoteSerializer, TaskSerializer
+    PhotoSerializer, QuoteSerializer, TaskSerializer
 from rest_framework.viewsets import ModelViewSet
 
 
@@ -42,3 +42,7 @@ class UploadViewSet(ModelViewSet):
 class QuoteViewSet(ModelViewSet):
     serializer_class = QuoteSerializer
     queryset = Quote.objects.all()
+
+class PhotViewSet(ModelViewSet):
+    serializer_class = PhotoSerializer
+    queryset = Photo.objects.all()
